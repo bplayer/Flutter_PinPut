@@ -68,19 +68,19 @@ class PinPutState extends State<PinPut>
     super.dispose();
   }
 
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState appLifecycleState) {
-    if (appLifecycleState == AppLifecycleState.resumed) {
-      _checkClipboard();
-    }
-  }
+  // @override
+  // void didChangeAppLifecycleState(AppLifecycleState appLifecycleState) {
+  //   if (appLifecycleState == AppLifecycleState.resumed) {
+  //     _checkClipboard();
+  //   }
+  // }
 
-  Future<void> _checkClipboard() async {
-    final ClipboardData clipboardData = await Clipboard.getData('text/plain');
-    if (clipboardData?.text?.length == widget.fieldsCount) {
-      widget.onClipboardFound(clipboardData.text);
-    }
-  }
+  // Future<void> _checkClipboard() async {
+  //   final ClipboardData clipboardData = await Clipboard.getData('text/plain');
+  //   if (clipboardData?.text?.length == widget.fieldsCount) {
+  //     widget.onClipboardFound(clipboardData.text);
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
